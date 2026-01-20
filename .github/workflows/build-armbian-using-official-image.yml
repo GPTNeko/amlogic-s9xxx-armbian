@@ -321,7 +321,7 @@ jobs:
           
          
           if  [[ -z "${armbian_url}" ]]; then
-              armbian_url="https://mirrors.tuna.tsinghua.edu.cn/armbian-releases/odroidn2/Armbian_25.11.1_Odroidn2_noble_current_6.12.58_minimal.img.xz"
+              armbian_url="https://mirrors.tuna.tsinghua.edu.cn/armbian-releases/odroidn2/archive/Armbian_25.11.1_Odroidn2_noble_current_6.12.58_minimal.img.xz"
           fi
           
           echo "ARMBIAN_URL=${armbian_url}" >> ${GITHUB_ENV}
