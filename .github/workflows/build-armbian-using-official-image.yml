@@ -318,10 +318,12 @@ jobs:
         run: |
           # Get the url of the rebuild armbian file
           armbian_url="${{ inputs.armbian_url }}"
-          if  [[ -z "${armbian_url}" ]]; then
-              armbian_url="https://mirrors.tuna.tsinghua.edu.cn/armbian-releases/odroidn2/archive/Armbian_25.11.1_Odroidn2_noble_current_6.12.58_minimal.img.xz"           
-              else
-                  echo -e "Invalid download path: [ ${armbian_site} ]"
+          if  [[ -z "${armbian_url}" ]];
+          then
+              armbian_url="https://mirrors.tuna.tsinghua.edu.cn/armbian-releases/odroidn2/Armbian_25.11.1_Odroidn2_noble_current_6.12.58_minimal.img.xz"
+          fi
+          
+          echo "ARMBIAN_URL=${armbian_url}" >> ${GITHUB_ENV}
                   exit 1
               fi
           fi
